@@ -222,7 +222,7 @@
           <h2>Dormitory Reservation</h2>
           <p>Discover comfortable and convenient living spaces tailored for students and guest at St. Paul Homes.</p>
           <div class="button-group">
-            <a class="btn-reserve" href="reservation_user.html">Reserve Now</a>
+            <a class="btn-reserve" href="reservation_user.php">Reserve Now</a>
             <button class="btn-learn">Learn More</button>
           </div>
         </div>
