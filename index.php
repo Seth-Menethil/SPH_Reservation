@@ -204,8 +204,8 @@
       </div>
       <nav>
         <ul>
-            <li><a href="landing.html">Home</a></li>
-            <li><a href="reservation_user.html">Reservation</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="reservation_user.php">Reservation</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
