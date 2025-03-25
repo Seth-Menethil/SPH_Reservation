@@ -1,13 +1,10 @@
 <?php
-// 1. Connect to the database
-$conn = new mysqli("localhost", "root", "", "sph_db");
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include "connection/dbconn.php";
 
 // 2. Fetch the records
 $sql = "SELECT * FROM sph_reservation";
 $result = $conn->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -219,8 +216,8 @@ $result = $conn->query($sql);
                   <th>Email</th>
                   <th>Contact</th>
                   <th>Arrival</th>
-                  <th>Departure</th>
                   <th>Date Filed</th>
+                  <th>Print</th>
                 </tr>
               </thead>
               <tbody>
@@ -232,8 +229,14 @@ $result = $conn->query($sql);
                       <td><?php echo htmlspecialchars($row['email_id']); ?></td>
                       <td><?php echo htmlspecialchars($row['contact_no']); ?></td>
                       <td><?php echo htmlspecialchars($row['date_time_arrival']); ?></td>
-                      <td><?php echo htmlspecialchars($row['date_time_departure']); ?></td>
                       <td><?php echo htmlspecialchars($row['date_filed']); ?></td>
+                      <td>
+                        <form action="reservation_print.php" method="POST">
+                          <input type="hidden" value="<?php echo htmlspecialchars($row['reservation_id']); ?>" name="reservation_id">
+                          <button class="btn btn-info" id="printBtn" name="reservation_list">Print Form</button>
+                        </form>
+
+                      </td>
                     </tr>
                   <?php endwhile; ?>
                 <?php else: ?>

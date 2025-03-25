@@ -387,7 +387,6 @@
                 <div class="col-md-12">
                   <!-- The submit button now has type="submit" so that the form posts to the backend -->
                   <button type="submit" class="btn btn-primary" id="submitBtn">Submit Form</button>
-                  <button type="button" class="btn btn-info" id="printBtn">Print Form</button>
                   <button type="reset" class="btn btn-secondary">Reset</button>
                 </div>
               </div>
